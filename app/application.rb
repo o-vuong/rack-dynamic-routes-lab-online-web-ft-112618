@@ -1,7 +1,7 @@
 class Application
   @@items = [Item.new("Apple", 5.23),Item.new("Fig", 2.43)]
   def call(env)
-    resp =Rack::Response.new
+    resp = Rack::Response.new
     req = Rack::Response.new(env)
     if req.path.match(/items/)
       item_name = req.path.split(/items/).last
